@@ -17,9 +17,7 @@ class SmsCompose extends React.Component {
                     </div>
                     <div className="d-flex flex-column start" style={{marginTop:"1em"}}>
                     <input type="text" className="form-control" placeholder="Phone" defaultValue={this.props.user.phone}/>
-                    <textarea className="form-control" placeholder="Type your message" rows="6" maxLength="128" style={{marginTop: ".5em"}}>
-
-                    </textarea>
+                    <textarea name="message" className="form-control" placeholder="Type your message" rows="6" style={{marginTop: ".5em"}} value={this.state.message}/>
                     </div>
                     <div style={{marginTop:"1em", textAlign: "left"}}>
                     <button className="btn btn-success" onClick={this.smsSend}>Send</button>
